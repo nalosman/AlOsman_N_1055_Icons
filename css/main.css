@@ -29,3 +29,15 @@ body {
   min-width: 155px;
   align-self: center;
 }
+
+#badge {
+  cursor: pointer;
+  width: 30%;
+}
+
+
+
+/* inline svg css styles */
+.st0:hover { opacity:0.1; fill: #fefefe; }
+
+.st1:hover{fill:#00FF00;}
