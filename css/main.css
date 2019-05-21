@@ -41,3 +41,10 @@ body {
 .st0:hover { opacity:0.1; fill: #fefefe; }
 
 .st1:hover{fill:#00FF00;}
+
+
+
+/* These are dynamic styles */
+.selected {
+  color: blue !important;
+}
