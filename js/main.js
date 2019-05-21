@@ -9,8 +9,9 @@
 
   // let stores the reference to element as a variable (in memory)
   let svgGraphic = document.querySelector("#badgeSVG"),
-      mainHeadline = document.querySelector(".main-headline");
-      mainText = document.querySelector("h3");
+      mainHeadline = document.querySelector(".main-headline"),
+      mainText = document.querySelector("#raster-vector h3"),
+      swapTextButton = document.querySelector(".switch-type");
 
   // functions are resuable pieces of CODE
   // that you can run anytime
@@ -20,10 +21,17 @@
     this.style.opacity = 0.5;
   }
 
-  svgGraphic.addEventListener("click", logMyId)
+  function swapText () {
+    mainHeadline.textContent = "Now you're something else!";
+    mainHeadline.classList.toggle("selected");
+
+    mainText.textContent = "Game of thrones is over";
+    mainText.classList.toggle("selected");
+  }
 
 
-  mainHeadline.textContent = "Now you're something else!";
-
-  mainText.textContent = "Game of thrones is over";
+// events always go down here
+// when someone clicks on you, this happens
+  svgGraphic.addEventListener("click", logMyId);
+  swapTextButton.addEventListener("click", swapText);
 })();
