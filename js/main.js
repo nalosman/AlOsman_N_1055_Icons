@@ -8,10 +8,11 @@
   // and using a css selector to find the element we want to querySelector
 
   // let stores the reference to element as a variable (in memory)
-  let svgGraphic = document.querySelector("#badgeSVG"),
-      mainHeadline = document.querySelector(".main-headline"),
+  let mainHeadline = document.querySelector(".main-headline"),
       mainText = document.querySelector("#raster-vector h3"),
       swapTextButton = document.querySelector(".switch-type");
+
+      allImages = document.querySelectorAll("#image-container img");
 
   // functions are resuable pieces of CODE
   // that you can run anytime
@@ -29,9 +30,13 @@
     mainText.classList.toggle("selected");
   }
 
-
 // events always go down here
 // when someone clicks on you, this happens
-  svgGraphic.addEventListener("click", logMyId);
   swapTextButton.addEventListener("click", swapText);
+
+// SELECT AND LOOP THROUGH A BUNCH OF ITEMS AT ONCE => 1 TO MANY RELATIONSHIP
+  allImages.forEach(item => {
+    item.addEventListener("click", logMyId);
+  });
+
 })();
