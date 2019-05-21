@@ -8,7 +8,9 @@
   // and using a css selector to find the element we want to querySelector
 
   // let stores the reference to element as a variable (in memory)
-  let svgGraphic = document.querySelector("#badgeSVG");
+  let svgGraphic = document.querySelector("#badgeSVG"),
+      mainHeadline = document.querySelector(".main-headline");
+      mainText = document.querySelector("h3");
 
   // functions are resuable pieces of CODE
   // that you can run anytime
@@ -19,4 +21,9 @@
   }
 
   svgGraphic.addEventListener("click", logMyId)
+
+
+  mainHeadline.textContent = "Now you're something else!";
+
+  mainText.textContent = "Game of thrones is over";
 })();
